@@ -1,2 +1,2 @@
 # webvtt-parser
-Simple WEBVTT parser
+Simple WebVTT parser

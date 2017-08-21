@@ -1,0 +1,44 @@
+{
+  "name": "webvtt-parser",
+  "version": "0.0.1",
+  "description": "Node.js library to parse WebVTT files into an array of objects",
+  "main": "src/webvttParser.js",
+  "files": [
+    "src/"
+  ],
+  "engines": {
+    "node": ">=4"
+  },
+  "scripts": {
+    "docs": "jsdoc2md --files 'src/**/*.js' --no-gfm --separators --name-format --private > API.md && git add API.md",
+    "lint": "eslint src/ test/",
+    "test": "tap test/**/*.test.js --coverage | tap-spec",
+    "posttest": "tap --coverage-report=lcov && codecov"
+  },
+  "pre-commit": [
+    "docs",
+    "lint"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/camfraser/webvtt-parser.git"
+  },
+  "author": {
+    "name": "Cameron Fraser",
+    "email": "cam.fraser@gmail.com",
+    "url": "http://plovermedia.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/camfraser/webvtt-parser/issues"
+  },
+  "homepage": "https://github.com/camfraser/webvtt-parser#readme",
+  "devDependencies": {
+    "codecov": "^1.0.1",
+    "eslint": "^3.17.1",
+    "eslint-config-airbnb-base": "^11.1.1",
+    "jsdoc-to-markdown": "^3.0.0",
+    "tap": "^7.0.0",
+    "tap-spec": "^4.1.1"
+  }
+}
